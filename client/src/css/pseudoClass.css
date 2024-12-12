@@ -1,0 +1,303 @@
+/* -------------------------------------------------------
+	
+	SOMMAIRE
+	- Variables
+	- Pseudo class
+
+--------------------------------------------------------*/
+
+
+/* -------------------------------------------------------
+
+	VARIABLES
+
+--------------------------------------------------------*/
+:root {
+    --spacing--6: 6px;
+    --spacing--12: 12px;
+    --spacing--18: 18px;
+    --spacing--24: 24px;
+    --spacing--30: 30px;
+    --spacing--36: 36px;
+    --spacing--42: 42px;
+    --spacing--48: 48px;
+    --spacing--54: 54px;
+    --spacing--60: 60px;
+    --spacing--66: 66px;
+    --spacing--72: 72px;
+    --spacing--78: 78px;
+    --spacing--84: 84px;
+    --spacing--90: 90px;
+    --spacing--96: 96px;
+    --spacing--102: 102px;
+    --spacing--108: 108px;
+    --spacing--114: 114px;
+    --spacing--120: 120px;
+    --spacing--126: 126px;
+
+    --color--white: white;
+    --color--black: black;
+    --color--grey: #999999;
+    /*--color--brown: #231301;*/
+    --color--brown: #170b01;
+    /*--color--brown: #6E4D2F;*/
+    --color--castlegreen: #45a049;
+    --color--matisse: #1D6BA7;
+    --color--puce: #CE978C;
+    --color--harvestgold: #DAC17C;
+
+    --color--for: #902817;
+    --color--dex: #5d7331;
+    --color--con: #976b1d;
+    --color--int: #1e2c49;
+    --color--sag: #481d3a;
+    --color--cha: #3db4b9;
+
+    --color--ini: #A1201A;
+    --color--pr: #FDC74F;
+    --color--dd: #8299CE;
+    --color--vitesse: #F3914A;
+    --color--fatigue: #2C2E35;
+}
+/* usage : 
+color: var(--color--white)
+*/
+/* -------------------------------------------------------
+
+	FIN VARIABLES
+
+--------------------------------------------------------*/
+
+
+
+
+
+/* -------------------------------------------------------
+
+	CLASS GENERIQUES
+
+--------------------------------------------------------*/
+/* Background */
+.background-black {
+    background-color: var(--color--black);
+}
+.background-white {
+    background-color: var(--color--white);
+}
+.background-grey {
+    background-color: var(--color--grey);
+}
+.background-castlegreen {
+    background-color: var(--color--castlegreen);
+}
+.background-matisse {
+    background-color: var(--color--matisse);
+}
+.background-puce {
+    background-color: var(--color--puce);
+}
+.background-brown {
+    background-color: var(--color--brown);
+}
+.background-harvestgold {
+    background-color: var(--color--harvestgold);
+}
+.background-for {
+    background-color: var(--color--for);
+}
+.background-dex {
+    background-color: var(--color--dex);
+}
+.background-con {
+    background-color: var(--color--con);
+}
+.background-int {
+    background-color: var(--color--int);
+}
+.background-sag {
+    background-color: var(--color--sag);
+}
+.background-cha {
+    background-color: var(--color--cha);
+}
+.background-ini {
+    background-color: var(--color--ini);
+}
+.background-pr {
+    background-color: var(--color--pr);
+}
+.background-dd {
+    background-color: var(--color--dd);
+}
+.background-vitesse {
+    background-color: var(--color--vitesse);
+}
+.background-fatigue {
+    background-color: var(--color--fatigue);
+}
+
+/* Color */
+.color-white {
+    color: var(--color--white);
+}
+.color-black {
+    color: var(--color--black);
+}
+.color-grey {
+    color: var(--color--grey);
+}
+.color-castlegreen {
+    color: var(--color--castlegreen);
+}
+.color-matisse {
+    color: var(--color--matisse);
+}
+.color-puce {
+    color: var(--color--puce);
+}
+.color-brown {
+    color: var(--color--brown);
+}
+.color-harvestgold {
+    color: var(--color--harvestgold);
+}
+.color-for {
+    color: var(--color--for);
+}
+.color-dex {
+    color: var(--color--dex);
+}
+.color-con {
+    color: var(--color--con);
+}
+.color-int {
+    color: var(--color--int);
+}
+.color-sag {
+    color: var(--color--sag);
+}
+.color-cha {
+    color: var(--color--cha);
+}
+
+/* Flex */
+/* Conteneur flex de base */
+.flex {
+    display: flex;
+}
+/* Alignement des éléments au centre */
+.flex-center {
+    justify-content: center;
+    align-items: center;
+}
+/* Espace entre les éléments */
+.flex-space-between {
+    justify-content: space-between;
+}
+.flex-space-around {
+    justify-content: space-around;
+}
+/* Alignement des éléments en début et en fin */
+.flex-start {
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.flex-end {
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+/* Orientation en ligne (par défaut) */
+.flex-row {
+    flex-direction: row;
+}
+.flex-row-reverse {
+    flex-direction: row-reverse;
+}
+/* Orientation en colonne */
+.flex-column {
+    flex-direction: column;
+}
+.flex-column-reverse {
+    flex-direction: column-reverse;
+}
+/* Orientation wrap */
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+/* Gap entre les éléments */
+.gap-small {
+    gap: var(--spacing--6);
+}
+.gap-medium {
+    gap: var(--spacing--12);
+}
+.gap-large {
+    gap: var(--spacing--24);
+}
+/* Prendre tout l'espace disponible */
+.flex-grow {
+    flex-grow: 1;
+}
+/* Ajustement de l'espace minimal */
+.flex-shrink {
+    flex-shrink: 1;
+}
+/* Taille fixe d'un élément */
+.flex-basis-auto {
+    flex-basis: auto;
+}
+.flex-basis-50 {
+    flex-basis: 50%;
+}
+.flex-basis-100 {
+    flex-basis: 100%;
+}
+
+/* Tailles */
+.height100 {
+    height: 100vh;
+}
+.width100 {
+    width: 100%;
+}
+
+/* Positions */
+.absolute {
+    position: absolute;
+}
+.relative {
+    position: relative;
+}
+.top-left0 {
+    top: 0;
+    left: 0;
+}
+
+/* Padding */
+.padding-section {
+    padding: var(--spacing--48) var(--spacing--24);
+}
+
+.padding-top-bottom {
+    padding-top: var(--spacing--24);
+    padding-bottom: var(--spacing--24);
+}
+
+/* Border */
+.redirection {
+    border-top: .5px solid var(--color--white);
+    border-bottom: .5px solid var(--color--white);
+}
+
+/* Case */
+.uppercase {
+    text-transform: uppercase;
+}
+
+
+/* -------------------------------------------------------
+
+	FIN CLASS GENERIQUES
+
+--------------------------------------------------------*/

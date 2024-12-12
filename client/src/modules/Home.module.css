@@ -1,0 +1,44 @@
+.hero {
+    margin-top: -10vh;
+    justify-content: flex-end;
+    align-items: center;
+}
+.h1 {
+    margin-bottom: var(--spacing--120);
+}
+.h1Img {
+    width: 80%;
+}
+.h1Text {
+    text-transform: uppercase;
+    font-size: 1.8rem;
+}
+
+.homeBackground,
+.divBackground,
+.heroVecteur {
+    background-size: cover;
+    background-position: center;
+}
+.homeBackground {
+    background-image: url("../../../../public/images/mobile/heromobilesombre.jpg");
+}
+.divBackground {
+    background-image: url("../../../../public/images/mobile/heroVecteur.svg");
+    height: 15vh;
+}
+
+.h3Ligne {
+    height: 50%;
+    border-bottom: .5px solid var(--color--white);
+}
+
+.img {
+    padding-bottom: var(--spacing--24);
+}
+
+.img2 {
+    padding-bottom: var(--spacing--48);
+}
+
+

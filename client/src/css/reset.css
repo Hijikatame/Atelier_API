@@ -1,0 +1,96 @@
+/* -------------------------------------------------------
+
+	RESET
+
+--------------------------------------------------------*/
+html,
+body {
+    max-width: 100%;
+	border: none;
+	margin: 0;
+	padding: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+address,
+big,
+cite,
+code,
+em,
+img,
+small,
+strike,
+sub,
+sup,
+li,
+ol,
+ul,
+fieldset,
+form,
+figure,
+label,
+legend,
+button,
+table,
+caption,
+tr,
+th,
+td {
+	margin: 0;
+    padding: 0;
+    border: none;
+    outline: 0;
+    font-size: inherit;
+	line-height: inherit;
+    vertical-align: baseline;
+    text-align: inherit;
+    background: transparent;
+}
+
+blockquote::before,
+blockquote::after {
+	content: '';
+}
+*, *:before, *:after { 
+	box-sizing: border-box; 
+	text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+html {
+	scroll-behavior: smooth;
+}
+body {
+    -webkit-tap-highlight-color: transparent;
+}
+input[type="text"], 
+input[type="tel"], 
+input[type="email"], 
+input[type="password"], 
+input[type="search"], 
+textarea {
+    outline: none;
+    -webkit-appearance:none;
+       -moz-appearance:none;
+            appearance:none;
+}
+ul, ol {
+	list-style: none;
+}
+ul ul, ul ul ul, ol ol, ol ol ol {
+    list-style: none;
+}
+
+main {
+    min-height: calc(100vh - 20vh);
+}
+
+/* -------------------------------------------------------
+	FIN RESET
+--------------------------------------------------------*/

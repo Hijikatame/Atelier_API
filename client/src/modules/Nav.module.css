@@ -1,0 +1,170 @@
+.header {
+    height: 10vh;
+    border-bottom: 1px solid var(--color--white);
+}
+
+.logo {
+    width: 40%;
+    padding-right: var(--spacing--12);
+}
+
+.containerBurger {
+    width: 10vh;
+    border-right: 1px solid var(--color--white);
+    cursor: pointer;
+}
+
+.containerBurger > span {
+    display: block;
+    width: 70%;
+    height: 3px;
+}
+
+/* Animation de réduction des spans */
+@keyframes shrinkSpan {
+    0% { width: 70%; }
+    8% { width: 0; }
+    67% { width: 0; }
+    75% { width: 70%;}
+    100% { width: 70%; }
+}
+/* Animation pour l'image de couverture */
+@keyframes expandOverlay {
+    0% {transform: scaleX(0);}
+    8% {transform: scaleX(0);}
+    16% { transform: scaleX(1); }
+    59% { transform: scaleX(1); }
+    67% { transform: scaleX(0); }
+    100% { transform: scaleX(0); }
+}
+
+/* Applique l'animation à chaque span avec un délai différent */
+.containerBurger span:nth-child(1) {
+    animation: shrinkSpan 12s infinite ease-in-out; 
+}
+
+.containerBurger span:nth-child(2) {
+    animation: shrinkSpan 12s infinite ease-in-out .2s;
+}
+
+.containerBurger span:nth-child(3) {
+    animation: shrinkSpan 12s infinite ease-in-out .4s; 
+}
+
+/* Image en position absolue pour l'animation de couverture */
+.imageOverlay {
+    width: 70%;
+    height: 70%;
+    top: 30%;
+    left: 15%;
+    background-size: cover;
+    transform-origin: center; /* Pour que l'extension se fasse du centre */
+    animation: expandOverlay 12s infinite ease-in-out;
+}
+
+/* Style pour les lignes du "X" */
+
+.cross1 {
+    transform: rotate(45deg); /* Ligne diagonale */
+    top: 50%;
+    left: 15%;
+    transition: transform 0.3s ease;
+}
+
+.cross2 {
+    transform: rotate(-45deg); /* Ligne diagonale opposée */
+    top: 50%;
+    left: 15%;
+    transition: transform 0.3s ease;
+}
+
+.containerBurger.open span.cross1,
+.containerBurger.open span.cross2 {
+    animation: none; /* Désactive l'animation quand le menu est ouvert */
+}
+
+.containerNav {
+    top: 10vh;
+    left: 0;
+    min-height: 90vh;
+    transform: translateX(-100%);
+    transition: all 0.3s ease-in-out;
+}
+
+.containerNav.showNav {
+    transform: translateX(0);
+}
+
+.nav {
+    padding-left: var(--spacing--24);
+    padding-top: var(--spacing--24);
+}
+
+.containerSearch {
+    border-bottom: 1px solid var(--color--white);
+}
+
+.inputField::placeholder {
+    font-family: 'Cinzel', serif;
+    font-weight: normal;
+    font-size: 1.6rem;
+    color: var(--color--grey);
+}
+  
+.inputField {
+    background: none;
+    width: calc(100% - 10vh);
+    height: 10vh;
+    padding: 0 1rem;
+    font-size: 1.6rem;
+    font-family: 'Cinzel', serif;
+    outline: none;
+    border: none;
+    border-right: 1px solid var(--color--white);
+}
+
+.button {
+    width: 10vh;
+    background: none;
+    border: none;
+    font-size: 3rem;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    padding: 0;
+}
+  
+.button:hover {
+    transform: scale(1.2);
+}
+
+.button:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+.displayNone {
+    display: none;
+}
+
+/* Style de base pour les liens */
+.link {
+    width: fit-content;
+}
+
+/* Ajout d'un trait sous chaque lien */
+.link::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: var(--color--matisse); 
+    transition: width 0.3s ease;
+}
+
+/* Lorsque le lien est survolé, le trait s'étend */
+.link:hover::before,
+.link.active::before {
+    width: 100%;
+}

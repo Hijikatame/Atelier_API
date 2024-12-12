@@ -1,0 +1,226 @@
+.textAlign {
+    text-align: center;
+}
+
+.rotate {
+    transform: rotate(45deg);
+    transition: all 0.3s ease;
+}
+.rotateOpen {
+    transform: rotate(-90deg);
+}
+
+.article {
+    max-height: 0;
+    padding: 0 0 0 0;
+    overflow: hidden; /* Masque le contenu lorsque l'article est fermé */
+    transition: all 0.3s ease-in-out; /* Transition fluide */
+}
+
+.articleOpen {
+    max-height: 10000px;
+    padding: var(--spacing--24) 0 var(--spacing--24) 0;
+}
+
+.divInput {
+    width: 80%;
+}
+.divInputSmall {
+    width: 49%;
+}
+
+.imgInput {
+    border: 2px solid var(--color--black);
+    border-radius: 50%;
+    width: 7vh;
+    height: 7vh;
+    background-color: var(--color--white);
+}
+.input {
+    border: none;
+    background: none;
+    width: calc(100% - 7vh);
+    height: 7vh;
+    border: 2px solid var(--color--black);
+    border-radius: 6px;
+    margin-left: -2vh;
+    padding-left: 4vh;
+}
+.input,
+.input::placeholder {
+    font-family: 'Cinzel', serif;
+    font-weight: normal;
+    font-size: 1.4rem;
+    color: #333;
+}
+
+.inputFile {
+    border: 2px solid var(--color--black);
+    border-radius: 6px;
+    padding: var(--spacing--6);
+    cursor: pointer;
+}
+
+.imagePreview {
+    margin-top: 10px;
+    max-width: 200px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.previewImg {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.inputFileHidden {
+    display: none;
+}
+
+.uploadButton {
+    width: fit-content;
+    padding: var(--spacing--12) var(--spacing--24);
+    background-color: var(--color--black); /* Couleur de fond du bouton */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+.uploadButton:hover {
+    background-color: #1D6BA7; /* Couleur de fond au survol */
+}
+
+.spanCarac {
+    width: 100%;
+    height: 7vh;
+    font-weight: bolder;
+    border-radius: var(--spacing--6);
+    margin-left: 3.5vh;
+    padding: 0 var(--spacing--6) 0 var(--spacing--24);
+}
+
+.borderFor {
+    border-color: var(--color--for);
+    background-color: var(--color--white);
+}
+.borderDex {
+    border-color: var(--color--dex);
+    background-color: var(--color--white);
+}
+.borderCon {
+    border-color: var(--color--con);
+    background-color: var(--color--white);
+}
+.borderInt {
+    border-color: var(--color--int);
+    background-color: var(--color--white);
+}
+.borderSag {
+    border-color: var(--color--sag);
+    background-color: var(--color--white);
+}
+.borderCha {
+    border-color: var(--color--cha);
+    background-color: var(--color--white);
+}
+
+.divInputCarac {
+    width: 65%;
+}
+
+.inputCarac {
+    width: 70%;
+    height: 10vh;
+    background-color: var(--color--white);
+    margin-top: -2vh;
+    margin-left: 0;
+}
+
+.spanIndice {
+    right: 1vh;
+    bottom: -3.5vh;
+}
+.paddingBottom {
+    padding-bottom: 3.5vh;
+}
+.pMargin {
+    margin-bottom: 0;
+}
+.talentBorderFor {
+    border-right: 2px solid var(--color--for);
+    width: 10%;
+}
+.talentBorderDex {
+    border-right: 2px solid var(--color--dex);
+    width: 10%;
+}
+.talentBorderCon {
+    border-right: 2px solid var(--color--con);
+    width: 10%;
+}
+.talentBorderInt {
+    border-right: 2px solid var(--color--int);
+    width: 10%;
+}
+.talentBorderSag {
+    border-right: 2px solid var(--color--sag);
+    width: 10%;
+}
+.talentBorderCha {
+    border-right: 2px solid var(--color--cha);
+    width: 10%;
+}
+.rotatedText {
+    display: inline-block;
+    transform: rotate(-90deg);
+    transform-origin: center;
+    text-align: center;
+}
+.ref {
+    margin-left: 14%;
+    font-size: .8rem;
+}
+
+.inputDivers {
+    height: 8vh;
+    margin-top: 0;
+    border-radius: var(--spacing--12) 0 var(--spacing--12) 0;
+}
+.spanMax {
+    left: 0;
+    bottom: 0;
+}
+.spanDivers {
+    display: inline-block;
+    top: 0;
+    left: 0;
+    width: 70%;
+    margin-left: 3vh;
+    text-align: center;
+    border-radius: var(--spacing--12) 0 0 0;
+    text-transform: uppercase;
+    color: var(--color--white);
+}
+
+.borderIni {
+    border: 2px solid var(--color--ini);
+}
+.borderPr {
+    border: 2px solid var(--color--pr);
+}
+.borderDd {
+    border: 2px solid var(--color--dd);
+}
+.borderVitesse {
+    border: 2px solid var(--color--vitesse);
+}
+.borderFatigue {
+    border: 2px solid var(--color--fatigue);
+}
+
+

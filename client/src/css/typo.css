@@ -1,0 +1,185 @@
+/* Importation de la police Nunito */
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+/* -------------------------------------------------------
+	
+	SOMMAIRE
+	- Typographie base
+	- Typographie
+    - Couleur
+
+--------------------------------------------------------*/
+
+/* -------------------------------------------------------
+
+	TYPOGRAPHIE BASE
+
+--------------------------------------------------------*/
+/*
+Système proportionnel
+
+Il est important de bien définir les corps de polices (font-size), les retraits (padding) et les marges (margin) en unités typographiques, ici rem. 
+Cela permet, lorsqu'on change le corps de référence (html = 62.5% = 10px), à l'ensemble de conserver ses proportions, tout étant basé sur la valeur du corps de police de html, l'élément racine.
+*/
+
+/* Définir le cadratin de référence (root) à 10px pour faciliter les calculs */
+html {
+	font-size: 62.5%; /* = 10px */
+}
+/* On remet body aux 16px par défaut */
+/* On utilise .em au lieu de .rem à cause d'un bug du navigateur Chrome  */
+/* https://code.google.com/p/chromium/issues/detail?id=320754 */
+html {
+	font-size: 62.5%; /* 1rem = 10px */
+}
+
+/* Base de typographie pour le corps de texte */
+body {
+	font-size: 1.6rem; /* = 16px */
+	line-height: 1.5; /* 150% de la taille de police */
+	font-family: "Arial", sans-serif; /* Font par défaut */
+}
+
+/* Paragraphe */
+p {
+	font-size: 1.4rem;
+	line-height: 1.5;
+	margin-bottom: 2.4rem;
+}
+
+/* Listes */
+ul,
+ol {
+	margin-left: 2rem;
+	padding-left: 1rem;
+}
+ul ul,
+ul ul ul,
+ol ol,
+ol ol ol {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+/* Liens */
+a {
+	font-weight: 600;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+
+/* Titres H1 à H6 */
+h1 {
+	font-size: 4.8rem; /* 48px */
+	line-height: 1.1;
+	margin-bottom: 2.4rem;
+	font-weight: 700;
+}
+
+h2 {
+	font-size: 3.6rem; /* 36px */
+	line-height: 1.2;
+	margin-bottom: 2rem;
+}
+
+h3 {
+	font-size: 2.6rem; /* 26px */
+	line-height: 1.4;
+	margin-bottom: 1.8rem;
+}
+
+h4 {
+	font-size: 2.4rem; /* 24px */
+	line-height: 1.3;
+	margin-bottom: 1.5rem;
+}
+
+h5 {
+	font-size: 2rem; /* 20px */
+	line-height: 1.3;
+	margin-bottom: 1.2rem;
+}
+
+h6 {
+	font-size: 1.8rem; /* 18px */
+	line-height: 1.4;
+	margin-bottom: 1rem;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	padding-top: 2rem;
+}
+
+/* Responsive pour les petits écrans */
+@media (max-width: 768px) {
+	h1 {
+		font-size: 2.4rem; /* 24px */
+	}
+	
+	h2 {
+		font-size: 1.8rem; /* 18px */
+	}
+	
+	h3 {
+		font-size: 1.6rem; /* 16px */
+	}
+	
+	h4 {
+		font-size: 1.4rem; /* 14px */
+	}
+	p {
+		font-size: 1.2rem; /* 12px */
+	}
+}
+/* -------------------------------------------------------
+	FIN TYPOGRAPHIE BASE
+--------------------------------------------------------*/
+
+/* -------------------------------------------------------
+
+	TYPOGRAPHIE
+
+--------------------------------------------------------*/
+
+body,
+p {
+	font-family: "Lato", sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: "Cinzel", serif;
+}
+
+.cinzel {
+	font-family: "Cinzel", sans-serif;
+}
+
+/* -------------------------------------------------------
+	FIN TYPOGRAPHIE
+--------------------------------------------------------*/
+
+/* -------------------------------------------------------
+
+	COULEURS
+
+--------------------------------------------------------*/
+body {
+	color: var(--color--black);
+}
+
+a {
+	color: var(--color--black);
+}
+
+/* -------------------------------------------------------
+	COULEURS
+--------------------------------------------------------*/
