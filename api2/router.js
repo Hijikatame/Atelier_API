@@ -3,17 +3,8 @@ import express from "express";
 
 // Importation des controllers
 import { getHealthController } from "./controllers/getHealthController.js";
-import {
-	getRegisterController,
-	verifyUserController,
-} from "./controllers/getRegisterController.js";
-import { loginUserController } from "./controllers/loginUserController.js";
-import { logoutUserController } from "./controllers/logoutUserCotroller.js";
-import { protect } from "./middlewares/authMiddleware.js";
+import { getRegisterController } from "./controllers/getRegisterController.js";
 import { getAllUsersController } from "./controllers/getAllUsersController.js";
-import { updateUserProfileController } from "./controllers/updateUserProfileController.js";
-import { deleteUserAccountController } from "./controllers/deleteUserAccountController.js";
-import { validation } from "./middlewares/validation.js";
 
 // Création d'une instance de routeur
 const router = express.Router();
@@ -26,13 +17,13 @@ router.get("/health", getHealthController);
 router.get("/users", getAllUsersController);
 
 // Route pour l'inscription d'un nouveau user
-router.post("/register", validation, getRegisterController);
+router.post("/register", getRegisterController);
 
 // Route pour la vérification d'un nouveau user
 router.get("/verify", verifyUserController);
 
 // Route pour la connexion
-router.post("/login", validation, loginUserController);
+router.post("/login", loginUserController);
 
 // Route pour la déconnexion (protégée par un middleware)
 router.post("/logout", protect, logoutUserController);
