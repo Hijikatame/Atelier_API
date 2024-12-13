@@ -10,6 +10,10 @@ import APropos from "./componants/pages/aPropos/APropos.jsx";
 import PageUnivers from "./componants/pages/univers/PageUnivers.jsx";
 import PageRegles from "./componants/pages/regles/PageRegle.jsx";
 import PageBestiaire from "./componants/pages/bestiaire/PageBestiaire.jsx";
+import PageConnexion from './componants/pages/log/PageConnexion.jsx';
+import PageInscription from './componants/pages/log/PageInscription.jsx';
+import PageMembre from './componants/pages/membre/PageMembre.jsx';
+import PrivateRoute from './componants/pages/membre/PrivateRoute.jsx';
 
 const router = createBrowserRouter([
   {
@@ -38,6 +42,25 @@ const router = createBrowserRouter([
       {
         path: "/bestiaire",
         element: <PageBestiaire />,
+      },
+      {
+        path: "/connexion",
+        element: <PageConnexion />,
+      },
+      {
+        path: "/inscription",
+        element: <PageInscription />,
+      },
+      // Route protéger par un token de session
+      {
+        path: "/membre",
+        element: <PrivateRoute />,
+        children: [
+          {
+            path: "/membre",
+            element: <PageMembre />,
+          },
+        ],
       },
     ],
   },

@@ -1,0 +1,9 @@
+.hero {
+    margin-top: -10vh;
+}
+
+.heroBackground {
+    background-image: url("../../../../public/images/mobile/heromobilesombre.jpg");
+    background-size: cover;
+    background-position: center;
+}

@@ -109,6 +109,18 @@ export default function Nav() {
                     >
                         Encyclopéd'êtres
                     </Link>
+                    <Link
+                        className={`${styles.link} relative color-white ${location.pathname === "/connexion" ? styles.active : ""}`}
+                        to="/connexion"
+                    >
+                        Connexion
+                    </Link>
+                    <Link
+                        className={`${styles.link} relative color-white ${location.pathname === "/inscription" ? styles.active : ""}`}
+                        to="/inscription"
+                    >
+                        Inscription
+                    </Link>
                 </nav>
             </div>
         </header>

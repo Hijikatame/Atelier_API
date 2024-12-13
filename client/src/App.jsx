@@ -13,9 +13,9 @@ function App() {
 
   return (
     <>
-		<Layout>
-            <Outlet />
-        </Layout>
+		  <Layout>
+        <Outlet />
+      </Layout>
     </>
   )
 }
