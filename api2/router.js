@@ -5,6 +5,8 @@ import express from "express";
 import { getHealthController } from "./controllers/getHealthController.js";
 import { getRegisterController } from "./controllers/getRegisterController.js";
 import { getAllUsersController } from "./controllers/getAllUsersController.js";
+import { validation } from "./middlewares/validation.js";
+import { hashedPassword } from "./middlewares/hashedPassword.js";
 
 // Création d'une instance de routeur
 const router = express.Router();
@@ -17,13 +19,13 @@ router.get("/health", getHealthController);
 router.get("/users", getAllUsersController);
 
 // Route pour l'inscription d'un nouveau user
-router.post("/register", getRegisterController);
+router.post("/register", validation, hashedPassword, getRegisterController);
 
 // Route pour la vérification d'un nouveau user
 router.get("/verify", verifyUserController);
 
 // Route pour la connexion
-router.post("/login", loginUserController);
+router.post("/login", validation, hashedPassword, loginUserController);
 
 // Route pour la déconnexion (protégée par un middleware)
 router.post("/logout", protect, logoutUserController);

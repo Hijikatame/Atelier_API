@@ -3,7 +3,7 @@ import { validateEmail, validatePassword } from "../consts/consts";
 export const validation = (req, res, next) => {
 	const { pseudo, email, password } = req.body;
 	try {
-		// verification  si le pseudo | email | password fifferents de null
+		// verification  si le pseudo | email | password differents de null
 		if (!pseudo || !email || !password) {
 			res.status(400).json({
 				status: 400,
